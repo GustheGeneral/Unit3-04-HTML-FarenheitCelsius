@@ -1,9 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <p>Paragraph</p>
-  </body>
+
+<head>
+  <!--Meta Data-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta author="Gustav Ihlenfeld">
+  <meta class="ICD2O - Technology and Innovations">
+  <title>Fahrenheit to Celsius Converter</title>
+  <!--stylesheet-->
+  <link href="css/style.css" rel="stylesheet" type="text/css"/>
+  <!--favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io (1))/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io (1)/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io (1)/favicon-16x16.png">
+  <link rel="manifest" href="./favicon_io (1)/site.webmanifest">
+</head>
+
+<body>
+  <!--Header-->
+  <h1>Fahrenheit to Celsius Converter</h1>
+  <h5>Creator : Gustav Ihlenfeld</h5>
+  <h5>Class : ICD2O</h5>
+  <img src="./images/cf.jpg" alt="Formula" style="float: right; margin: 0 10px;">
+  <p><b><i>Enter the value below in the box below to calculate the volume of a Sphere:</i></b></p>
+  <style>
+  </style>
+
+  <label for="fahrenheit"><i>Enter temperature in Fahrenheit:</i></label>
+  <input type="text" id="fahrenheit" />
+  <br></br>
+  <button onclick="convertTemp()">Convert</button>
+
+  <p id="result"></p>
+  <script>
+    function convertTemp() {
+      let fahrenheit = document.getElementById("fahrenheit").value;
+      let celsius = (fahrenheit - 32) * 5 / 9;
+
+      document.getElementById("result").innerHTML = `Temperature in Celsius: ${celsius.toFixed(2)}`;
+    }
+  </script>
+
+</body>
+
 </html>
